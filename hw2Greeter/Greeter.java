@@ -1,7 +1,13 @@
 public class Greeter{
-	public void greet(){
+    private String greeting = "Hello";
+    public Greeter(String s){
+	greeting = s;
+    }
+    
+    
+    public String greet(){
 	    //
-		System.out.println("hello world");
+	return(greeting);
 	}
 }
 
