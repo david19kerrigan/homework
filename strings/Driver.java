@@ -4,7 +4,7 @@ public class Driver {
        	System.out.println(s.indexOf(' '));
 	int space = s.indexOf(' ');
         System.out.println(s.substring(0, space));
-	System.out.println(s.substring(space, 14));	
+	System.out.println(s.substring(space, s.length()));	
     }
     
 }

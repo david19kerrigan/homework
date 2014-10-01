@@ -81,3 +81,58 @@ public boolean lastDigit(int a, int b, int c) {
    }
 }
 
+public int stringMatch(String a, String b) {
+  int n = 0;
+  for(int i = 0; i<a.length()-2; i++){
+   if(a.substring(i,i+1)==b.substring(i,i+1)){
+    n++;
+   }
+  }
+  return n;
+}
+
+public String stringYak(String str) {
+  if(str.contains("yak")){
+   for(int i = 0; i<str.length()-3; i++){
+    int n = i+3;
+    if(str.substring(i,n).equals("yak")){
+     return(str.substring(0,i)+str.substring(n,str.length()));
+    }
+   }
+  }
+  return "a";
+}
+
+public String stringBits(String str) {
+  int n = 0;
+  String r = "";
+  while(n<str.length()){
+   r+=str.charAt(n);
+   n+=2;
+  }
+  return r;
+  
+  
+}
+
+public String frontTimes(String str, int n) {
+  if(str.length()<3){
+   int a = 0;
+   String r = "";
+   while(a<n){
+    r = r+str;
+    a++;
+   }
+   return r;
+  }
+  else{
+   int b = 0;
+   String d = "";
+   while(b<n){
+    d = d+str.substring(0,3);
+    b++;
+   }
+   return d;
+  }
+  return "a" ;
+ }
