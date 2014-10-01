@@ -91,6 +91,8 @@ public int stringMatch(String a, String b) {
   return n;
 }
 
+//These problems took me about an hour
+
 public String stringYak(String str) {
   if(str.contains("yak")){
    for(int i = 0; i<str.length()-3; i++){
