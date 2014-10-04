@@ -113,7 +113,45 @@ public class Shapes{
 		return result;
 	}
 
-
+	public String frame(int d, int s){
+		String result = "";
+		for(int i = 0; i<s; i++){
+			result+="*";
+		}
+		for(int i = 0; i<d-1; i++){
+			result+="*";
+			for(int n = 0; n<s-2; n++){
+				result+=" ";
+			}
+			result+="*\n";
+		}
+		for(int i = 0; i<3; i++){
+			result+="*";
+		}
+	}
+	public String stringX(String str) {
+  		String n= str.substring(1,str.length()-1);
+  		String pre = "";
+  		char x = 'x';
+  		for(int i = 0; i<n.length(); i++){
+   			if(n.charAt(i) == (x)){}
+   				else{
+    					pre+=n.charAt(i);
+   				}
+  		}
+  		return str.charAt(0)+pre+str.charAt(str.length()-1);
+	}
+	
+	public String stringSplosion(String str) {
+  		String result = "";
+  		int a = 0;
+  
+  		for(int b = 1; b<str.length()+1; b++){
+   			result+=str.substring(a,b);
+   
+  		}
+  	return result;
+	}
 	
 }	
 	
