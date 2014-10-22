@@ -1,4 +1,6 @@
-
+David Kerrigan
+Javis Wu
+Edward Fan
 
 Make each class have a function to change the health of that object.  This method is then used from within the attack method of another object.  
 
