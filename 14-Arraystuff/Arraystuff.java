@@ -23,8 +23,33 @@ public class Arraystuff{
 
     
 	
+    //Spacing/tabs are messed up for these first two because I copied them from the codinbat website (I wrote them on the website and pasted them here.)
+  
+    public int sum67(int[] nums) {
+    int total = 0;
+    for (int i = 0; i < nums.length; i++) {
+      if (nums[i] == 6) {
+        while(nums[i] != 7)
+          i++;
+      }
+      else
+        total += nums[i];
+    }
+    return total;
+    }
 
-    
+    public boolean more14(int[] nums) {
+    int ones = 0;
+    int fours = 0;
+    for (int i = 0; i < nums.length; i++) {
+    	if (nums[i] == 1)
+    		ones++;
+        if (nums[i] == 4)
+            fours++;
+    }
+    if(ones > fours){return 1;}
+    else{return 0;}
+    }
     public int freq(int i){
 	int total = 0;
 	int character=a[i];
@@ -33,6 +58,70 @@ public class Arraystuff{
 	}
 	return total;
     }
+    //I can't really understand what the question is asking; this is the most ambiguous writing I have ever seen.  
+
+	public int[] tenRun(int[] nums) {
+		boolean multiple = 0
+		for(int i = 0; i < nums.length; i++){
+			if(nums[i]%10==0 && multipe==0){
+				multiple = 1;
+
+			}
+			if(nums[i]%10==0 && multiple==1){
+				multiple = 0;
+			}
+			if(boolean){
+				nums[i]=10;
+			}
+		}
+	return ints;
+  
+
+	public boolean tripleUp(int[] nums) {
+  		for(int i = 0; i < nums.length-3; i++){
+  			int j=nums[i+2];
+  			int k=nums[i+1]+1;
+  			int current=nums[i]+2;
+  			if(current==k & k==j){
+  				return true;
+  			}
+  		}
+  		return false;
+
+		
+
+	}
+  	
+	public boolean canBalance(int[] nums){
+		int tLeft = 0;
+		int tRight = 0;
+		for(int i = 1; i < nums.length - 1; i++){
+			for(int j = 0; j < i; j++){
+				tLeft+=nums[j];
+			}
+			for(int h = i; h < nums.length; h++){
+				tRight+=nums[h];
+
+			}
+			if(tLeft==tRight){return true;}
+
+		}
+		return false;
+	}
+  	
+	public int[] seriesUp(int n){
+		int current = 0;
+		int lengthOf = (n*(n+1))/2;
+		int[] a = new int[lengthOf];
+		for(int i = 1; i < n+1; i++){
+			for(int j = 1; j < i + 1; j++){
+				a[current] = j;
+				current+=1;
+			}
+
+		}
+		return a;
+	}
 	    
 }
 
