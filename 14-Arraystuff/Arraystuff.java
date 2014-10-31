@@ -58,7 +58,7 @@ public class Arraystuff{
 	}
 	return total;
     }
-    //I can't really understand what the question is asking; this is the most ambiguous writing I have ever seen.  
+    //I can't really understand what the question is asking; this is the most ambiguous writing I have ever seen.  The code is functional but it doesn't seem to satisfy the constraints of the question.
 
 	public int[] tenRun(int[] nums) {
 		boolean multiple = 0
@@ -122,6 +122,54 @@ public class Arraystuff{
 		}
 		return a;
 	}
+
+  //Doesn't run becuase we haven't learned how to make nested arrays yet
+
+  public int maxMirror(int[] nums) {
+      int len = nums.length;
+      int currentA = 0;
+      int lengthO = (len*(len+1));
+      Object[] newA = new Object[lengthO];
+      for(int start = 0; start < nums.length - 1; start++){
+        for(int end = start + 1; end < nums.length; end++){
+          
+          int[] newArray = Arrays.copyOfRange(newA, start, end);
+          newA[currentA] = newArray;
+          current++;
+        }
+      }
+      arrayZ = 0;
+      for(int startC = 1; start < nums.length; start++){
+        for(int endC = startC - 1; end >= 0; end = end - 1){
+          
+          int[] newArrayC = Arrays.copyOfRange(newA, startC, endC);
+          newA[arrayZ] = newArrayC;
+          current++;
+        }
+      }
+      for(int i = 0; i < newA.length; i++){
+        for(int b = 0; b < newA.length; b++){
+          if(b != i){
+            arrayB = newA[b];
+            arrayI = newA[i];
+            ArrayList arrayListB = new ArrayList();
+            ArrayList arrayListI = new ArrayList();
+            for(int i = 0; i < arrayB.length; i++){
+              arrayListB.add(arrayB[i]);
+            }
+            for(int ab = 0; ab < arrayI.length; ab++){
+              arrayListI.add(arrayI[ab]);
+            }
+
+            
+            if(arrayListB==Collections.reverse(arrayListI)){return arrayB.length;}
+
+          }
+        }
+      }
+      return 0;
+  }
+
 	    
 }
 
