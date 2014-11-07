@@ -1,0 +1,4 @@
+public class Driver{
+    public static void main(String[] args){
+	Sarray s = new Sarray();
+	Sarray.add(1, 9);

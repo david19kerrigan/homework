@@ -1,0 +1,4 @@
+Use arrays to store multiple messages that can be displayed during the fight.
+Store all the enemies in an array.
+Store inventory in an array.
+Array of previous attacks done on the enemy.
