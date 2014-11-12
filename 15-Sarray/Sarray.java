@@ -29,6 +29,10 @@ public boolean full(int[] nums){
  return true;
 }
 public void  add(int index, int i){
+    try{int abcdefgh = data[index];
+    }catch(IndexOutOfBoundsException e){
+        System.out.println(e);
+    }
         // adds item i  at index, shifting everything down as needed.
         // also grows as needed abc
  if(!full(data)){
@@ -51,11 +55,19 @@ public int size() {
 }
 
 public int get(int index) {
+    try{int abcdefgh = data[index];
+    }catch(IndexOutOfBoundsException e){
+        System.out.println(e);
+    }
     return data[index];
         // returns the item at location index of the lsit
 }
 
 public int set(int index, int i){
+    try{int abcdefgh = data[index];
+    }catch(IndexOutOfBoundsException e){
+        System.out.println(e);
+    }
     int old = data[index];
     data[index] = i;
     return old;
@@ -64,6 +76,10 @@ public int set(int index, int i){
 }
 
 public int remove(int index){
+    try{int abcdefgh = data[index];
+    }catch(IndexOutOfBoundsException e){
+        System.out.println(e);
+    }
     int oldd = data[index];
     data[index] = 0;
     return oldd;
