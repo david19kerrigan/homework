@@ -1,0 +1,21 @@
+import java.util.*;
+public class Randomizer{
+    ArrayList<Integer> a = new ArrayList<Integer>();
+    a.add(1);
+    a.add(2);
+    a.add(3);
+    a.add(4);
+    a.add(5);
+    public ArrayList<Integer> randomize(){
+	ArrayList<Integer> newA = new ArrayList<Integer>();
+	for(int i = 0; i < a.size(); i++){
+	    Random r = new Random();
+	    newA.add(a.get(r.nextInt(a.size-1)));
+	}
+    }
+    public static void main(){
+	Randomizer r = new Randomizer();
+	r.randomize();
+    }
+}
+	
