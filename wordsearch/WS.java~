@@ -1,0 +1,10 @@
+public class WS{
+    private char[][] board;
+    public WS(int r, int c){
+	board = new char[r][c];
+    }
+    public WS(){
+	this(20,40);
+    }
+
+}
