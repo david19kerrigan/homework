@@ -95,7 +95,21 @@ public class WordSearch {
 	    }
     }
 
+    public void addWord(String w){
+    	Random r = new Random();
+    	r = random.nextInt(3)+1;
+    	if (r==1){
+    		addWordV(String w);
+    	}
+    	if(r==2){
+    		addWordH(String w);
+    	}
+    	if(r==3){
+    		addwordDR(String w);
 
+    	}
+    		
+    }
     
     public static void main(String[] args) {
 	WordSearch w = new WordSearch();
