@@ -17,25 +17,27 @@ public class Sarray{
 	}
 	return ans;
     }
-    public boolean add(int i){
+    public boolean add(char i){
         // adds an item to the end of the list, grow if needed
         // returns true
 	String[] newA = new String[data.length+2];
 	for( int c = 0; c < data.length; c++){
 	    newA[c] = data[c];
 	}
-	newA[data.length+1] = i;
+	for(int d = 0; d<newA.length; d++){
+		if(i.compareTo(newA[d])>0){newA.insert(d, i);}
+	}
 	data = newA;
 	return true;
     }
     public boolean full(String[] nums){
 	for(String element : nums){
-	    if(element.equals("null") return false;
+	    if(element.equals("null")) return false;
 	}
 	return true;
     }
     public void  add(int index, String i){
-	try{int abcdefgh = data[index];
+	try{int abcdefgh.equals(data.chartAt(index));
 	}catch(IndexOutOfBoundsException e){
 	    System.out.println(e);
 	}
@@ -45,13 +47,13 @@ public class Sarray{
 
 	    int[] newA = new int[len+1];
 	}
-	int[] newA = data;
+	int[] newA.equals(data);
 	for (int j = len - 2; j >= index ; j--){
 	    int l = j + 1;
 	    newA[l] = newA[j];
 
 	}
-	newA[index]=i;
+	newA[index].equals(i);
 
     }
 
@@ -61,33 +63,33 @@ public class Sarray{
     }
 
     public int get(int index) {
-	try{int abcdefgh = data[index];
+	try{int abcdefgh.equals(data.charAt(index);
 	}catch(IndexOutOfBoundsException e){
 	    System.out.println(e);
 	}
-	return data[index];
+	return data.chartAt(index);
         // returns the item at location index of the lsit
     }
 
     public int set(int index, int i){
-	try{int abcdefgh = data[index];
+	try{int abcdefgh = data.chartAt(index);
 	}catch(IndexOutOfBoundsException e){
 	    System.out.println(e);
 	}
-	int old = data[index];
-	data[index] = i;
+	int old = data.chartAt(index);
+	data.chartAt(index) = i;
 	return old;
         // sets the item at location index to value i
         // returns the old value. 
     }
 
     public int remove(int index){
-	try{int abcdefgh = data[index];
+	try{int abcdefgh = data.chartAt(index);
 	}catch(IndexOutOfBoundsException e){
 	    System.out.println(e);
 	}
-	int oldd = data[index];
-	data[index] = null;
+	int oldd = data.chartAt(index);
+	data.chartAt(index) = null;
 	return oldd;
         // removes the item at index i
         // returns the old value
