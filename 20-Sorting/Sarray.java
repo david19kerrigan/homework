@@ -1,99 +1,117 @@
 public class Sarray{
-    String[] data = new String[0]; 
-    private int len;
+	String[] data = new String[0]; 
+	private int len;
 
-    public Sarray() {
+	public Sarray() {
         // set up the initial instance variables
-	int last = 0;
-        len = data.length;
+		int last = 0;
+		len = data.length;
 
-    }
-   
-    
-    public String toString(){
-	String ans = "";
-	for(int i = 0; i < data.length; i++){
-	    ans+=data[i]+",";
 	}
-	return ans;
-    }
-    public boolean add(char i){
+
+
+	public String toString(){
+		String ans = "";
+		for(int i = 0; i < data.length; i++){
+			ans+=data[i]+",";
+		}
+		return ans;
+	}
+	public boolean add(char i){
         // adds an item to the end of the list, grow if needed
         // returns true
-	String[] newA = new String[data.length+2];
-	for( int c = 0; c < data.length; c++){
-	    newA[c] = data[c];
+		String[] newA = new String[data.length+2];
+		for( int c = 0; c < data.length; c++){
+			newA[c] = data[c];
+		}
+		for(int d = 0; d<newA.length; d++){
+			if(i.compareTo(newA[d])>0){newA.insert(d, i);}
+		}
+		data = newA;
+		return true;
 	}
-	for(int d = 0; d<newA.length; d++){
-		if(i.compareTo(newA[d])>0){newA.insert(d, i);}
+	public boolean full(String[] nums){
+		for(String element : nums){
+			if(element.equals("null")) return false;
+		}
+		return true;
 	}
-	data = newA;
-	return true;
-    }
-    public boolean full(String[] nums){
-	for(String element : nums){
-	    if(element.equals("null")) return false;
-	}
-	return true;
-    }
-    public void  add(int index, String i){
-	try{abcdefgh.equals(data.chartAt(index));
-	}catch(IndexOutOfBoundsException e){
-	    System.out.println(e);
-	}
+	public void  add(int index, String i){
+		try{abcdefgh.equals(data[index]);
+		}catch(IndexOutOfBoundsException e){
+			System.out.println(e);
+		}
         // adds item i  at index, shifting everything down as needed.
         // also grows as needed abc
-	if(!full(data)){
+		if(!full(data)){
 
-	    int[] newA = new int[len+1];
+			int[] newA = new int[len+1];
+		}
+		ewA.equals(data);
+		for (int j = len - 2; j >= index ; j--){
+			int l = j + 1;
+			newA[l] = newA[j];
+
+		}
+		newA[index].equals(i);
+
 	}
-	ewA.equals(data);
-	for (int j = len - 2; j >= index ; j--){
-	    int l = j + 1;
-	    newA[l] = newA[j];
 
-	}
-	newA[index].equals(i);
-
-    }
-
-    public int size() {
-	return data.length;
+	public int size() {
+		return data.length;
         // returns the number of items in the list (not the array size)
-    }
-
-    public int get(int index) {
-	try{abcdefgh.equals(data.charAt(index));
-	}catch(IndexOutOfBoundsException e){
-	    System.out.println(e);
 	}
-	return data.chartAt(index);
+
+	public int get(int index) {
+		try{abcdefgh.equals(data.charAt(index));
+		}catch(IndexOutOfBoundsException e){
+			System.out.println(e);
+		}
+		return data[index];
         // returns the item at location index of the lsit
-    }
-
-    public int set(int index, int i){
-	try{int abcdefgh = data.chartAt(index);
-	}catch(IndexOutOfBoundsException e){
-	    System.out.println(e);
 	}
-	int old = data.chartAt(index);
-	data.chartAt(index) = i;
-	return old;
+
+	public int set(int index, int i){
+		try{int abcdefgh = data[index];
+		}catch(IndexOutOfBoundsException e){
+			System.out.println(e);
+		}
+		int old = data[index];
+		data[index] = i;
+		return old;
         // sets the item at location index to value i
         // returns the old value. 
-    }
-
-    public int remove(int index){
-	try{int abcdefgh = data.chartAt(index);
-	}catch(IndexOutOfBoundsException e){
-	    System.out.println(e);
 	}
-	int oldd = data.chartAt(index);
-	data.chartAt(index) = null;
-	return oldd;
+
+	public int remove(int index){
+		try{int abcdefgh = data[index];
+		}catch(IndexOutOfBoundsException e){
+			System.out.println(e);
+		}
+		int oldd = data[index];
+		data[index] = null;
+		return oldd;
         // removes the item at index i
         // returns the old value
-    }
+	}
+	public void iSort(int [] nums){
+		int j;
+		int i;
+		for(j = 1;  j<numsl.length; j++){
+
+
+			for (i = last; i > 0 && newvalue < a[i-1] ; i--) {
+				a[i] = a[i-1];    
+			}
+			a[i]=newvalue;
+		}
+	}
+
+	
+
+
+
+
 }
 
 
