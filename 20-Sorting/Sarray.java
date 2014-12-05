@@ -94,6 +94,40 @@ public class Sarray{
         // removes the item at index i
         // returns the old value
     }
+
+    public void sSort(){
+	int i = 0;
+	n = data[i];
+	smallest = findSmallest(i);
+	data[i]=data[smallest];
+	data[smallest] = n;
+	i++
+    }
+    public int findSmallest(int a){
+	int j = 0;
+	int value = 0;
+	for(a; a < data.length; a++){
+	    if(data[a]>value){data[a]=j;
+		data[a] = value;
+	    }
+	}
+	return j
+    }
+    public void bSort(){
+	for(int i = 0; i < data.length; i++){
+	    for(int j = i; j < data.length-1; j++){
+		int m = j+1;
+		int a = data[j];
+		int b = data[m]
+		if(data[m] > data[j]){
+		    data[j] = b;
+		    data[m] = a;
+		}
+		else{break;}
+	    }
+	}
+    }
+    
 }
 
 
