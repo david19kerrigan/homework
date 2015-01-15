@@ -75,3 +75,9 @@ public class Game extends JPanel {
 		}
 	}
 }
+
+
+//Seems like mostly stuff to initiate the game graphics.  There's a little bit of function stuff in here, and detecting keystrokes.
+//I'm not very familiar with the syntax of this graphics stuff, but some of it seems similar to processing. 
+//I like how different methods are defined for the game like move.  I had a similar kind of class sturcture in my project.
+//In general seems alright, there's not much code here so not that much to say.
